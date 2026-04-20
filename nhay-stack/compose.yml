@@ -1,3 +1,4 @@
+name: nhay-stack-whoami
 services:  
   whoami:
     image: traefik/whoami
