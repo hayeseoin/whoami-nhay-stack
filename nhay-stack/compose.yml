@@ -8,10 +8,9 @@ services:
       - "traefik.enable=true"
       - "traefik.http.routers.whoami.rule=Host(`stack.nhay.es`)"
       - "traefik.http.routers.whoami.entrypoints=web"
+      - "traefik.docker.network=nhay-stack"
     networks:
       - nhay-stack
-    environment:
-      COMPOSE_PROJECT_NAME: nhay-stack-whoami
 
 networks:
   nhay-stack:
