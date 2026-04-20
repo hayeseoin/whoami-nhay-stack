@@ -9,6 +9,8 @@ services:
       - "traefik.http.routers.whoami.entrypoints=web"
     networks:
       - nhay-stack
+    environment:
+      COMPOSE_PROJECT_NAME: nhay-stack-whoami
 
 networks:
   nhay-stack:
