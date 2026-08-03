@@ -15,5 +15,5 @@ services:
       COMPOSE_PROJECT_NAME: whoami
 
 networks:
-  platform
+  platform:
     external: true
