@@ -6,13 +6,13 @@ services:
     restart: unless-stopped
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.whoami.rule=Host(`stack.nhay.es`)"
-      - "traefik.http.routers.whoami.entrypoints=web"
+      - "traefik.http.routers.whoami.rule=Host(`stack.platform-test.nhay.es`)"
+      - "traefik.http.routers.whoami.entrypoints=websecure"
     networks:
-      - nhay-stack
+      - platform
     environment:
-      COMPOSE_PROJECT_NAME: nhay-stack-whoami
+      COMPOSE_PROJECT_NAME: whoami
 
 networks:
-  nhay-stack:
+  platform
     external: true
