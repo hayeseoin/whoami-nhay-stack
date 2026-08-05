@@ -1,0 +1,16 @@
+name: nhay-stack-whoami
+services:  
+  whoami:
+    image: traefik/whoami
+    container_name: whoami
+    restart: unless-stopped
+    labels:
+      - "traefik.http.routers.${APP_NAME}.rule=Host(`${APP_HOSTNAME}`)"
+      - "traefik.http.routers.${APP_NAME}.entrypoints=web"
+      - "traefik.docker.network=platform"
+    networks:
+      - platform
+
+networks:
+  platform:
+    external: true
