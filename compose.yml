@@ -12,7 +12,7 @@ services:
     networks:
       - platform
     environment:
-      COMPOSE_PROJECT_NAME: whoami
+      COMPOSE_PROJECT_NAME: ${COMPOSE_PROJECT_NAME:-whoami}
 
 networks:
   platform:
